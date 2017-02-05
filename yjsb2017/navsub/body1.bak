@@ -1,8 +1,8 @@
 ﻿<?
-include_once '../conn.php'; 
+include 'global.php'; 
 if(empty($tid))
 {
-	echo "<script language='javascript'>window.alert('找不到该页面！'); self.location='index.php';</script>";
+	echo "<script language='javascript'>window.alert('不好意思找不到您要找的页面,是不是您走错门了呀~!');self.location='index.php';</script>";
 	exit();
 }
 $tid?$listdown=listdown($tid):$listdown;
@@ -12,6 +12,7 @@ if(!$page)$page=1;
 $table=" where tid='$tid' ";
 $pageid=$tid;
 $showpage=showpage($table,$pageid);
+include 'head.htm';
 ?>
 <body leftmargin="0" topmargin="0">
 <TABLE cellSpacing=0 cellPadding=0 width=792 align=center border=0>
@@ -234,3 +235,4 @@ print $showpage ?></div></td></tr>
   </TBODY>
 </TABLE>
 </body>
+<?php include_once "foot.htm"; ?>
