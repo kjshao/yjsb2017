@@ -1,39 +1,50 @@
 ﻿<?php
-include_once '../conn.php'; 
+//include_once '../conn.php'; 
 ?>
-<div class="row" style="background:rgb(125,187,244); margin:0px 0px 20px 0px; padding:0px; min-height:300px">
-<nav class="col-xs-3 sidebar" style="background:rgb(125,187,244); padding-top:0;">
-  <ul class="nav nav-pills flex-column">
-    <li class="nav-item">
-      <a class="nav-link active" href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=1">博士招生</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=2">硕士招生</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" href="http://www.gsc.dicp.ac.cn/bodylist8.php?tid=1" target=_blank>DICP 高校奖学金</a>
-    </li>
-  </ul>
-</nav>
-<div class="col-xs-9" style="background:#fff;">
-<?php
-if(empty($tid))
-{
-  echo "<h2 style='padding:20px;'>您所访问的页面不存在！</h2>";
-}
-$tid?$listdown=listdown($tid):$listdown;
-print $listdown;
-?>
-</div>
+<div class="row" style="background:rgb(125,187,244); margin:0px 0px 20px 0px; padding:0px;">
+  <nav class="col-xs-3 sidebar" style="background:rgb(125,187,244); padding-top:0;">
+    <ul class="nav nav-pills flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=1">博士招生</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=2">硕士招生</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="http://www.gsc.dicp.ac.cn/bodylist8.php?tid=1" target=_blank>DICP 高校奖学金</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="col-xs-9" style="background:#fff;">
+    <?php
+    if(empty($tid))
+    {
+      echo "<h2 style='padding:20px;'>您所访问的页面不存在！</h2>";
+    }
+    //$tid?$listdown=listdown($tid):$listdown;
+    //print $listdown;
+    ?>
+    <!-- paging -->
+    <center>
+      <div id="page-selection"></div>
+      <div id="page-info"></div>
+    </center>
+    <!-- paging -->
+  </div>
 </div>
 
 <?php
 function listdown($tid){
   global $db,$page;
+  if ( $tid == 1 ) {
+    $item = "博士招生";
+  } else if ( $tid == 2 ) {
+    $item = "硕士招生";
+  }
   $andsky="
   <table align=center width=100%  border=1 cellpadding=2 cellspacing=0 bordercolor=#E2E1E1 bgcolor=#FDFCF9>
   <tr height=60>
-    <td colspan=3 border=1 style='background:lightblue; font-size:20px; padding:0px 0px 0px 15px;'>TEST test</td>
+    <td colspan=3 border=1 style='background:lightblue; font-size:20px; padding:0px 0px 0px 15px;'>".$item."</td>
   </tr>
   <tr height=40>
     <td><div align=center><strong>招生信息</strong></div></td>

@@ -16,6 +16,8 @@
   <script src="<?php echo __SERVER__?>/jquery/1.12.4/jquery.min.js"></script>
   <script src="<?php echo __SERVER__?>/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="<?php echo __SERVER__?>/js/dropdown.min.js" type="text/javascript"></script>
+  <script src="<?php echo __SERVER__?>/js/jquery.bootpag.min.js"></script>
+  <script src="<?php echo __SERVER__?>/js/page.js"></script>
 </head>
 
 <body>
