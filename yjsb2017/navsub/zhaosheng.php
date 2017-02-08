@@ -1,15 +1,32 @@
-﻿<?
-include_once '../conn.php'; 
+﻿<?php
+//include_once '../conn.php'; 
+?>
+<div class="row" style="margin:0; padding:0; min-height:500px">
+<nav class="col-xs-3 sidebar" style="background:lightblue; padding-top:0;">
+  <ul class="nav nav-pills flex-column">
+    <li class="nav-item">
+      <a class="nav-link active" href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=1">博士招生</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=2">硕士招生</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="http://www.gsc.dicp.ac.cn/bodylist8.php?tid=1" target=_blank>DICP 高校奖学金</a>
+    </li>
+  </ul>
+</nav>
+<div class="col-xs-9" style="background:lightgrey;">
+<?php
 if(empty($tid))
 {
   echo "<h2 style='padding:20px;'>您所访问的页面不存在！</h2>";
-  exit();
 }
 //$tid?$listdown=listdown($tid):$listdown;
-$listdown=listdown($tid);
 ?>
-<?php
+</div>
+</div>
 
+<?php
 function listdown($tid){
   global $db,$page;
   $andsky="<table width=100%  border=0 cellspacing=0 cellpadding=0>
@@ -46,4 +63,5 @@ function listdown($tid){
   $andsky.="</table>";
   return $andsky;
 }
+print $listdown;
 ?>

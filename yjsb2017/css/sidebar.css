@@ -1,0 +1,40 @@
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  border-right: 1px solid #eee;
+}
+
+/* Sidebar navigation */
+.sidebar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar .nav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+  font-size: 18px;
+}
+
+.sidebar .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.sidebar .nav-link {
+  border-radius: 0;
+  padding-top: 20px ;
+  padding-bottom: 20px ;
+  padding-left: 75px ;
+}

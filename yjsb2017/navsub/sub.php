@@ -12,6 +12,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="<?php echo __SERVER__?>/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="<?php echo __SERVER__?>/css/basic.css" rel="stylesheet" type="text/css" />
+  <link href="<?php echo __SERVER__?>/css/sidebar.css" rel="stylesheet" type="text/css" />
   <script src="<?php echo __SERVER__?>/jquery/1.12.4/jquery.min.js"></script>
   <script src="<?php echo __SERVER__?>/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="<?php echo __SERVER__?>/js/dropdown.min.js" type="text/javascript"></script>
