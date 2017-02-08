@@ -1,5 +1,5 @@
 ﻿<?php
-//include_once '../conn.php'; 
+include_once '../conn.php'; 
 ?>
 <div class="row" style="margin:0; padding:0; min-height:500px">
 <nav class="col-xs-3 sidebar" style="background:lightblue; padding-top:0;">
@@ -21,7 +21,7 @@ if(empty($tid))
 {
   echo "<h2 style='padding:20px;'>您所访问的页面不存在！</h2>";
 }
-//$tid?$listdown=listdown($tid):$listdown;
+$tid?$listdown=listdown($tid):$listdown;
 ?>
 </div>
 </div>
