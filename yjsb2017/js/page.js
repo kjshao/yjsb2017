@@ -17,13 +17,15 @@ $(document).ready(function($) {
     lastClass: 'last',
     firstClass: 'first'
     }).on("page", function(event, num){
-      $("#page-info").html("第 " + num + " 页 / 共 " + np + " 页");
+      var np = $("#totalpage").text();
+      $("#page-info").html("第 " + num + " 页 / 共 " + np + " 页，共" + nt "条记录");
    }); 
   }
 ////////////////////////////////////////////
 // init page while loading
-  var np = 20;
+  var nt = $("#total").text();
+  var np = $("#totalpage").text();
   init_page(np);
-  $("#page-info").html("第 1 页 / 共 " + np + " 页");
+  $("#page-info").html("第 1 页 / 共 " + np + " 页，共" + nt "条记录");
 ////////////////////////////////////////////
 });

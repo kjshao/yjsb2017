@@ -30,6 +30,12 @@ include_once '../conn.php';
     $pageid=$tid;
     $showpage=showpage($table,$pageid,$item);
     print $showpage;
+
+    $query=$db->query("select * from andsky_down1 $table");
+    $total=$db->num_rows($query);
+    $totalpage=ceil($total/20);
+    echo "<p id='total' style='display:none'> $total </p>";
+    echo "<p id='totalpage' style='display:none'> $totalpage </p>";
     ?>
     <!-- paging -->
     <center>
@@ -58,13 +64,12 @@ function listdown($tid){
     <td width=75><div align=center><strong>招生类别</strong></div></td>
   <td width=95><div align=center><strong>发布日期</strong></div></td>
   </tr>";
-        if($page<=1){$page=0;}
-    $query=$db->query("select * from andsky_down1 where tid='$tid' order by num desc limit $page,20");
-      $num=$db->num_rows($query);
-        if($num<=0)
-        $andsky.="本栏目下暂时无文章,请管理员添加!!";
+  if($page<=1){$page=0;}
+  $query=$db->query("select * from andsky_down1 where tid='$tid' order by num desc limit $page,20");
+  $num=$db->num_rows($query);
+  if($num<=0) $andsky.="本栏目下暂时无文章,请管理员添加!!";
         
-        while($array=$db->fetch_array($query)){
+  while($array=$db->fetch_array($query)){
     $posttime=$array['posttime'];
     $title=$array['title'];
     $huan=$array['huan'];
@@ -74,9 +79,9 @@ function listdown($tid){
     $name=$array['name'];
     $time=date("Y-m-d",$posttime);
     $andsky.="<tr height=30>
-  <td><div align=left style='padding: 0px 15px 0px 15px;'>&nbsp;<a href=bodyshow1.php?id=$id>{$title}</a></div></td>
-  <td><div align=center>{$name}</div></td>
-  <td><div align=center>{$time}</div></td>";
+      <td><div align=left style='padding: 0px 15px 0px 15px;'>&nbsp;<a href=bodyshow1.php?id=$id>{$title}</a></div></td>
+      <td><div align=center>{$name}</div></td>
+      <td><div align=center>{$time}</div></td>";
   }
   $andsky.="</table>";
   return $andsky;
