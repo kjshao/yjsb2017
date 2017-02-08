@@ -23,6 +23,13 @@ include_once '../conn.php';
     }
     $tid?$listdown=listdown($tid):$listdown;
     print $listdown;
+    $andskyname=$db->get_one("select * from andsky_down1 where tid='$tid'");
+    $name=$andskyname['name'];
+    if(!$page)$page=1;
+    $table=" where tid='$tid' ";
+    $pageid=$tid;
+    $showpage=showpage($table,$pageid);
+    print $showpage;
     ?>
     <!-- paging -->
     <center>
@@ -73,5 +80,23 @@ function listdown($tid){
   }
   $andsky.="</table>";
   return $andsky;
+}
+function showpage($table,$pageid){
+  global $page,$db;
+  $query=$db->query("select * from andsky_down1 $table");
+  $total=$db->num_rows($query);
+  $totalpage=ceil($total/20);
+  $mopage=ceil(($totalpage*20)-20);
+  $uppage=$page-20;
+  if($page<=1){$page=0;}
+  $nextpage=$page+20;
+  if($nextpage>$total)$nextpage=$page;
+  if($uppage<20)$uppage=0;
+  if($page<=1){$pagenum=1;}else{
+  $pagenum=ceil($page/20)+1;
+  }
+  $showpage="&nbsp;&nbsp;共有<b><font color='#F15408'>$total</font></b>条记录，共<b><font color='#F15408'>$totalpage</font></b>页，当前为第<b><font color='#F15408'>$pagenum</font></b>页 
+  &nbsp;&nbsp;◇<a href='?tid=$pageid&page=0'>首页</a> ◇<a href='?tid=$pageid&page=$uppage'>上一页</a> ◇<a href='?tid=$pageid&page=$nextpage'>下一页</a> ◇<a href='?tid=$pageid&page=$mopage'>尾页</a>";
+  return $showpage;
 }
 ?>
