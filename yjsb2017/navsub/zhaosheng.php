@@ -5,7 +5,8 @@ if(empty($tid))
   echo "<h2 style='padding:20px;'>您所访问的页面不存在！</h2>";
   exit();
 }
-$tid?$listdown=listdown($tid):$listdown;
+//$tid?$listdown=listdown($tid):$listdown;
+$listdown=listdown($tid);
 ?>
 <?php
 
@@ -35,14 +36,14 @@ function listdown($tid){
     $fang=$array['fang'];
     $yan=$array['yan'];
     $id=$array['id'];
-                $name=$array['name'];
-                $time=date("Y-m-d",$posttime);
+    $name=$array['name'];
+    $time=date("Y-m-d",$posttime);
     $andsky.="<tr>
-    <td><div align=left>&nbsp;<img src=img/dot11.gif> <A HREF=bodyshow1.php?id=$id>{$title}</A></div></td>
+  <td><div align=left>&nbsp;<a href=bodyshow1.php?id=$id>{$title}</a></div></td>
   <td><div align=center>{$name}</div></td>
   <td><div align=center>{$time}</div></td>";
   }
   $andsky.="</table>";
   return $andsky;
 }
-print $listdown ?>
+?>
