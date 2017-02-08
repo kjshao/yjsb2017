@@ -1,17 +1,17 @@
 ﻿<?php
-//include_once '../conn.php'; 
+include_once '../conn.php'; 
 ?>
 <div class="row" style="background:rgb(125,187,244); margin:0px 0px 20px 0px; padding:0px;">
-  <nav class="col-xs-3 sidebar" style="background:rgb(125,187,244); padding-top:0;">
+  <nav class="col-xs-3 sidebar" style="background:rgb(125,187,244); padding:0px;">
     <ul class="nav nav-pills flex-column">
       <li class="nav-item">
-        <a class="nav-link active" href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=1">博士招生</a>
+        <a class="nav-link active" href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=1"><strong>博士招生</strong></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=2">硕士招生</a>
+        <a class="nav-link active" href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=2"><strong>硕士招生</strong></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="http://www.gsc.dicp.ac.cn/bodylist8.php?tid=1" target=_blank>DICP 高校奖学金</a>
+        <a class="nav-link active" href="http://www.gsc.dicp.ac.cn/bodylist8.php?tid=1" target=_blank><strong>DICP 高校奖学金</strong></a>
       </li>
     </ul>
   </nav>
@@ -21,8 +21,8 @@
     {
       echo "<h2 style='padding:20px;'>您所访问的页面不存在！</h2>";
     }
-    //$tid?$listdown=listdown($tid):$listdown;
-    //print $listdown;
+    $tid?$listdown=listdown($tid):$listdown;
+    print $listdown;
     ?>
     <!-- paging -->
     <center>
