@@ -17,15 +17,28 @@ $(document).ready(function($) {
     lastClass: 'last',
     firstClass: 'first'
     }).on("page", function(event, num){
+      var pass;
       var np = $("#totalpage").text();
-      $("#page-info").html("第 " + num + " 页 / 共 " + np + " 页，共" + nt "条记录");
+      pass = {};
+      pass.num = num;
+      $("#page-info").html("第 " + num + " 页 / 共 " + np + " 页，共" + nt + "条记录");
+      $.ajax({
+        method:'POST',
+        url:'zhaoshengDB.php',
+        //async:true,
+        data: pass
+      }).done(function( msg ){
+        $("#page-info").html( msg );
+      });
    }); 
   }
 ////////////////////////////////////////////
 // init page while loading
   var nt = $("#total").text();
   var np = $("#totalpage").text();
+  //alert(nt);
+  //alert(np);
   init_page(np);
-  $("#page-info").html("第 1 页 / 共 " + np + " 页，共" + nt "条记录");
+  $("#page-info").html("第 1 页 / 共 " + np + " 页，共" + nt + "条记录");
 ////////////////////////////////////////////
 });
