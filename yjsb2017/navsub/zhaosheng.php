@@ -1,5 +1,5 @@
 ﻿<?php
-include_once '../conn.php'; 
+  include_once '../conn.php'; 
 ?>
 <div class="row" style="background:rgb(125,187,244); margin:0px 0px 20px 0px; padding:0px;">
 <nav class="col-xs-3 sidebar" style="background:rgb(125,187,244); padding:0px;">
@@ -16,8 +16,7 @@ include_once '../conn.php';
 </nav>
 <div class="col-xs-9" style="background:#fff;">
 <?php
-  if(empty($tid))
-  {
+  if(empty($tid)) {
     echo "<h2 style='padding:20px;'>您所访问的页面不存在！</h2>";
   } elseif ( $tid >= 1 ) {
     $nameHead = array("博士招生","硕士招生");
@@ -52,7 +51,7 @@ function listdown($tid,$nameHead,$nameTable,$nameContent){
   <tr height=60><td colspan=".$ncolumn."border=1 style='background:lightblue; font-size:20px; padding:0px 0px 0px 15px;'>".$nameHead[$tid-1]."</td></tr>
   <tr height=40>";
   for ( $i=0; $i<$ncolumn; $i++ ) {
-    $andsky.="<td width=''><div align=center><strong>".$nameTalbe[$i]."/strong></div></td>"
+    $andsky.="<td width=''><div align=center><strong>".$nameTable[$i]."</strong></div></td>";
   }
   $andsky.="</tr>";
   $query=$db->query("select * from andsky_down1 where tid='$tid' order by num desc limit 0,20");
