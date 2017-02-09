@@ -2,7 +2,7 @@
 <ul id="menubar">
   <li><a href="http://www.gsc.dicp.ac.cn/index2017.php">首页</a></li>
   <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=zhineng">职能</a></li>
-  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng">招生</a>
+  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=1">招生</a>
   	<ul>
   	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=1">博士招生</a></li>
   	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=2">硕士招生</a></li>
