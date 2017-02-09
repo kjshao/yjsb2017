@@ -28,7 +28,7 @@ $(document).ready(function($) {
         //async:true,
         data: pass
       }).done(function( msg ){
-        $("#page-info").html( msg );
+        $("#mainTable").html( msg );
       });
    }); 
   }
