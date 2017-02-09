@@ -4,9 +4,9 @@ include_once(__ROOT__.'/navsub/listdown.php');
 $tid = intval($_POST['tid']);
 // parameters
 include_once(__ROOT__.'/navsub/zhaoshengVar.php');
-$pg = $dp*$_POST['num'] - $dp;
-$page = array($pg,$dp);
+$pg = $dp[$tidx]*($_POST['num'] - 1);
+$page = [$pg,$dp[$tidx]];
 //
-$tid?$listdown=listdown($db,$tableName,$tid,$nameHead,$nameTable,$nameContent,$width,$page):$listdown;
+$tid?$listdown=listdown($db,$tableName[$tidx],$tid,$nameHead[$tidx],$nameTable[$tidx],$nameContent[$tidx],$width[$tidx],$page):$listdown;
 echo $listdown; 
 ?>

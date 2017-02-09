@@ -18,14 +18,14 @@
 <div class="col-xs-9" style="background:#fff; min-height:300px">
 <?php
   include_once(__ROOT__.'/navsub/zhaoshengVar.php');
-  $page = array(0,$dp);
+  $page = [0,$dp[$tidx]];
 
-  $tid?$listdown=listdown($db,$tableName,$tid,$nameHead,$nameTable,$nameContent,$width,$page):$listdown;
+  $tid?$listdown=listdown($db,$tableName[$tidx],$tid,$nameHead[$tidx],$nameTable[$tidx],$nameContent[$tidx],$width[$tidx],$page):$listdown;
   print $listdown;
 
-  $query=$db->query("select * from {$tableName[$tid-1]} where tid='$tid'");
+  $query=$db->query("select * from {$tableName[$tidx]} where tid='$tid'");
   $total=$db->num_rows($query);
-  $totalpage=ceil($total/$dp);
+  $totalpage=ceil($total/$dp[$tidx]);
   echo "<p id='item' style='display:none'> $item </p>";
   echo "<p id='tid' style='display:none'> $tid </p>";
   echo "<p id='total' style='display:none'> $total </p>";

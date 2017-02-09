@@ -3,13 +3,13 @@ function listdown($db,$tableName,$tid,$nameHead,$nameTable,$nameContent,$width,$
   $ncolumn = count( $nameTable );
   $andsky="<div id='mainTable'>
   <table align=center width=100%  border=1 cellpadding=2 cellspacing=0 bordercolor=#E2E1E1 bgcolor=#FDFCF9>
-  <tr height=60><td colspan=".$ncolumn."border=1 style='background:lightblue; font-size:20px; padding:0px 0px 0px 15px;'>".$nameHead[$tid-1]."</td></tr>
+  <tr height=60><td colspan=".$ncolumn."border=1 style='background:lightblue; font-size:20px; padding:0px 0px 0px 15px;'>".$nameHead."</td></tr>
   <tr height=40>";
   for ( $i=0; $i<$ncolumn; $i++ ) {
     $andsky.="<td width=''><div align=center><strong>".$nameTable[$i]."</strong></div></td>";
   }
   $andsky.="</tr>";
-  $cmd = "select * from {$tableName[$tid-1]} where tid='$tid' order by num desc limit $page[0],$page[1]";
+  $cmd = "select * from {$tableName} where tid='$tid' order by num desc limit $page[0],$page[1]";
   $query=$db->query("$cmd");
   $num=$db->num_rows($query);
   if($num<=0) $andsky.="本栏目下暂时无文章!";
