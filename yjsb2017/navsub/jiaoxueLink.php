@@ -2,7 +2,7 @@
   include_once '../conn.php'; 
   include_once(__ROOT__.'/navsub/listdown.php');
   $tid = $_POST['tid'];
-  include_once(__ROOT__.'/navsub/zhaoshengVar.php');
+  include_once(__ROOT__.'/navsub/jiaoxueVar.php');
   $page = array(0,$dp);
 
   $tid?$listdown=listdown($db,$tableName,$tid,$nameHead,$nameTable,$nameContent,$width,$page):$listdown;
