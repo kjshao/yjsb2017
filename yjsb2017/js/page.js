@@ -3,8 +3,6 @@ $(document).ready(function($) {
 // init page while loading
   var nt = $("#total").text();
   var np = $("#totalpage").text();
-  //alert(nt);
-  //alert(np);
   init_page(np);
   $("#page-info").html("第 1 页 / 共 " + np + " 页，共" + nt + "条记录");
 ////////////////////////////////////////////
@@ -27,14 +25,17 @@ $(document).ready(function($) {
     }).on("page", function(event, num){
       var pass;
       var np = $("#totalpage").text();
+      var nt = $("#total").text();
       var tid = $("#tid").text();
+      var myurl = $("#item").text().trim();
       pass = {};
       pass.num = num;
       pass.tid = tid;
+      pass.item = myurl;
       $("#page-info").html("第 " + num + " 页 / 共 " + np + " 页，共" + nt + "条记录");
       $.ajax({
         method:'POST',
-        url:'zhaoshengDB.php',
+        url:'db.php',
         async:true,
         data: pass
       }).done(function( msg ){
@@ -49,12 +50,13 @@ $(document).ready(function($) {
     i = parseInt(i) + 1;
     if ( i != tid ) {
       var pass;
-      var myurl = $("#item").text().trim() + 'Link.php';
+      var myurl = $("#item").text().trim();
       pass = {};
       pass.tid = i;
+      pass.item = myurl;
       $.ajax({
         method:'POST',
-        url:myurl,
+        url:'link.php',
         async:true,
         dataType:'json',
         data: pass
@@ -64,6 +66,7 @@ $(document).ready(function($) {
         $("#total").html( msg[1] );
         $("#totalpage").html( msg[2] );
         init_page( msg[2] );
+        $("#page-info").html("第 1 页 / 共 " + msg[2] + " 页，共" + msg[1] + "条记录");
       });
     }
   });

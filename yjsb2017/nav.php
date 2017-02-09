@@ -13,13 +13,13 @@
   	<ul>
   	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiaoxue&tid=1">资料中心</a></li>
   	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiaoxue&tid=2">课程安排</a></li>
-  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiaoxue&tid=22">规章制度</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiaoxue&tid=3">规章制度</a></li>
   	</ul>
   </li>
-  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?tid=xueji">学籍</a>
+  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=xueji&tid=1">学籍</a>
   	<ul>
-  	<li><a href="http://www.gsc.dicp.ac.cn/list2.php?tid=30" target=_blank>信息发布</a></li>
-  	<li><a href="http://www.gsc.dicp.ac.cn/body.php?tid=22" target=_blank>规章制度</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=xueji&tid=1">信息发布</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=xueji&tid=2">规章制度</a></li>
   	<li><a href="http://www.gsc.dicp.ac.cn/web04.php#01" target=_blank>表格下载</a></li>
   	</ul>
   </li>
