@@ -39,9 +39,10 @@ include_once '../conn.php';
 </div>
 
 <?php
-function listdown($tiem,$tid){
+function listdown($item,$tid){
   global $db;
   $andsky="
+  <div id='mainTable'>
   <table align=center width=100%  border=1 cellpadding=2 cellspacing=0 bordercolor=#E2E1E1 bgcolor=#FDFCF9>
   <tr height=60>
     <td colspan=3 border=1 style='background:lightblue; font-size:20px; padding:0px 0px 0px 15px;'>".$item."</td>
@@ -55,7 +56,6 @@ function listdown($tiem,$tid){
   $num=$db->num_rows($query);
   if($num<=0) $andsky.="本栏目下暂时无文章!";
         
-  $andsky.="<div id='mainTable'>";
   while($array=$db->fetch_array($query)){
     $posttime=$array['posttime'];
     $title=$array['title'];
@@ -65,13 +65,14 @@ function listdown($tiem,$tid){
     $id=$array['id'];
     $name=$array['name'];
     $time=date("Y-m-d",$posttime);
-    $andsky.="<tr height=30>
+    $andsky.="
+      <tr height=30>
       <td><div align=left style='padding: 0px 15px 0px 15px;'>&nbsp;<a href=bodyshow1.php?id=$id>{$title}</a></div></td>
       <td><div align=center>{$name}</div></td>
-      <td><div align=center>{$time}</div></td>";
+      <td><div align=center>{$time}</div></td>
+      </tr>";
   }
-  $andsky.="</div>";
-  $andsky.="</table>";
+  $andsky.="</table></div>";
   return $andsky;
 }
 ?>
