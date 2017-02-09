@@ -9,11 +9,11 @@
   	<li><a href="http://www.gsc.dicp.ac.cn/bodylist8.php?tid=1" target=_blank>DICP 高校奖学金</a></li>
   	</ul>
   </li>
-  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiaoxue">教学</a>
+  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiaoxue&tid=1">教学</a>
   	<ul>
-  	<li><a href="http://www.gsc.dicp.ac.cn/body2.php?tid=1" target=_blank>资料中心</a></li>
-  	<li><a href="http://www.gsc.dicp.ac.cn/body2.php?tid=2" target=_blank>课程安排</a></li>
-  	<li><a href="http://www.gsc.dicp.ac.cn/body.php?tid=22" target=_blank>规章制度</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiaoxue&tid=1">资料中心</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiaoxue&tid=2">课程安排</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiaoxue&tid=22">规章制度</a></li>
   	</ul>
   </li>
   <li><a href="<?php echo __SERVER__?>/navsub/sub.php?tid=xueji">学籍</a>

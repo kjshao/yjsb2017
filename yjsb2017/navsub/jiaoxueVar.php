@@ -7,6 +7,6 @@
   $nameContent = array("title","name","posttime","id");
   $nameTable = array("招生信息","招生类别","发布日期");
   $width = array("0","80","100");
-  $tableName = array("andsky_down1","andsky_down1","andsky_down");
+  $tableName = array("andsky_down2","andsky_down2","andsky_down");
   $dp = 20;
 ?>
