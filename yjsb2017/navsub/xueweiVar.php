@@ -9,6 +9,6 @@
     $dp = array(20,20,20);
     $nameTable = array(array("标题","类别","发布日期"),array("标题","类别","发布日期"),array("标题","发布日期"));
     $nameContent = array(array("title","name","posttime","id"),array("title","name","posttime","id"),array("title","posttime","id"));
-    $width = array(array(0,80,100),array(0,80,100),array(0,100));
+    $width = array(array(0,80,100),array(0,100,100),array(0,100));
   }
 ?>
