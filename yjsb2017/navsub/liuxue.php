@@ -12,7 +12,7 @@
       <a class="nav-link active" href="#"><strong>港澳台招生</strong></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active" href="#"><strong>Professors Introduction</strong></a></li>
+      <a class="nav-link active" href="#"><strong>Professors<br>Introduction</strong></a></li>
   </ul>
 </nav>
 <div class="col-xs-9" style="background:#fff; min-height:300px">
