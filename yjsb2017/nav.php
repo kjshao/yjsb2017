@@ -32,12 +32,12 @@
   	<li><a href="http://www.gsc.dicp.ac.cn/web04.php#04" target=_blank>表格下载</a></li>
   	</ul>
   </li>
-  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=21">就业</a>
+  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=1">就业</a>
   	<ul>
-  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=21">出国留学</a></li>
-  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=22">招聘信息</a></li>
-  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=23">就业政策</a></li>
-  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=24">培训指导</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=1">出国留学</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=2">招聘信息</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=3">就业政策</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=4">培训指导</a></li>
   	</ul>
   </li>
   <li><a href="#" style="font-size:14px; padding:6px 15px 6px 15px">International<br>Students</a>
