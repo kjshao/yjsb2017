@@ -23,6 +23,6 @@
 </nav>
 <div class="col-xs-9" style="background:#fff; min-height:300px">
 <?php
-  include_once(__ROOT__.'/navsub/xuejiVar.php');
+  include_once(__ROOT__.'/navsub/xueweiVar.php');
   include_once(__ROOT__.'/navsub/tail.php');
 ?>
