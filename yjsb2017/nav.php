@@ -40,21 +40,26 @@
   	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=4">培训指导</a></li>
   	</ul>
   </li>
-  <li><a href="#" style="font-size:14px; padding:6px 15px 6px 15px">International<br>Students</a>
+  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=liuxue&tid=1" style="font-size:14px; padding:6px 15px 6px 15px">International<br>Students</a>
   	<ul>
-  	<li><a href="http://www.gsc.dicp.ac.cn/body5.php?tid=1" target=_blank>留学生招生<br>Enrollment</a></li>
-  	<li><a href="http://www.gsc.dicp.ac.cn/body5.php?tid=2" target=_blank>港澳台招生</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=liuxue&tid=1">留学生招生<br>Enrollment</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=liuxue&tid=2">港澳台招生</a></li>
   	</ul>
   </li>
-  <li><a href="#">奖学金</a>
+  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jxj&tid=1">奖学金</a>
   	<ul>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jxj&tid=1">获奖名单</a></li>
   	<li><a href="http://www.gsc.dicp.ac.cn/jxj">奖学金申请</a></li>
-  	<li><a href="http://www.gsc.dicp.ac.cn/body3.php?tid=3">获奖名单</a></li>
   	</ul>
   </li>
-  <li><a href="http://www.gsc.dicp.ac.cn/body0.php?tid=22" target=_blank>大厦管理</a></li>
+  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=dasha&tid=1">大厦管理</a></li>
   <li><a href="http://www.dicp.ac.cn/xxptt/wtxh" target=_blank>多彩生活</a></li>
-  <li><a href="http://www.gsc.dicp.ac.cn/body.php?tid=22" target=_blank>制度表格</a></li>
+  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=zhidu&tid=1">制度表格</a>
+  	<ul>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=zhidu&tid=1">规章制度</a></li>
+  	<li><a href="http://www.gsc.dicp.ac.cn/web04.php#01" target=_blank>表格下载</a></li>
+  	</ul>
+  </li>
   <li><a href="http://www.dicp.ac.cn" >所主页</a></li>
 </ul>
 </div>
