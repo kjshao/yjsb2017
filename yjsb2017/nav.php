@@ -20,24 +20,24 @@
   	<ul>
   	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=xueji&tid=1">信息发布</a></li>
   	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=xueji&tid=2">规章制度</a></li>
-  	<li><a href="http://www.gsc.dicp.ac.cn/web04.php#01" target=_blank>表格下载</a></li>
+  	<li><a href="http://www.gsc.dicp.ac.cn/web04.php#03" target=_blank>表格下载</a></li>
   	</ul>
   </li>
-  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?tid=xuewei">学位</a>
+  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=xuewei&tid=1">学位</a>
   	<ul>
-  	<li><a href="http://www.gsc.dicp.ac.cn/body3.php?tid=1" target=_blank>工作程序</a></li>
-  	<li><a href="http://www.gsc.dicp.ac.cn/body3.php?tid=2" target=_blank>学位授予</a></li>
-  	<li><a href="http://www.gsc.dicp.ac.cn/body.php?tid=22" target=_blank>规章制度</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=xuewei&tid=1">工作程序</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=xuewei&tid=2">学位授予</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=xuewei&tid=3">规章制度</a></li>
   	<li><a href="#">同等学力</a></li>
-  	<li><a href="http://www.gsc.dicp.ac.cn/web04.php#01" target=_blank>表格下载</a></li>
+  	<li><a href="http://www.gsc.dicp.ac.cn/web04.php#04" target=_blank>表格下载</a></li>
   	</ul>
   </li>
-  <li><a href="http://www.gsc.dicp.ac.cn/bodylist4.php?tid=22" target=_blank>就业</a>
+  <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=21">就业</a>
   	<ul>
-  	<li><a href="http://www.gsc.dicp.ac.cn/bodylist4.php?tid=22" target=_blank>出国留学</a></li>
-  	<li><a href="http://www.gsc.dicp.ac.cn/bodylist4.php?tid=22" target=_blank>招聘信息</a></li>
-  	<li><a href="http://www.gsc.dicp.ac.cn/bodylist4.php?tid=22" target=_blank>就业政策</a></li>
-  	<li><a href="http://www.gsc.dicp.ac.cn/bodylist4.php?tid=22" target=_blank>培训指导</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=21">出国留学</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=22">招聘信息</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=23">就业政策</a></li>
+  	<li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=jiuye&tid=24">培训指导</a></li>
   	</ul>
   </li>
   <li><a href="#" style="font-size:14px; padding:6px 15px 6px 15px">International<br>Students</a>
