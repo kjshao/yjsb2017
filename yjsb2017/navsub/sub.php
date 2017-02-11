@@ -26,7 +26,7 @@ include_once(__ROOT__.'/jumbotron.php');
 include_once(__ROOT__.'/nav.php');
 $item = $_GET['item'];
 $tid = $_GET['tid'];
-if ( $item == 'zhineng' ) {
+if ( $item == 'zhineng' || $item == 'show' ) {
   $file = __ROOT__.'/navsub/'.$item.'.php';
 } else {
   $file = __ROOT__.'/navsub/item.php';

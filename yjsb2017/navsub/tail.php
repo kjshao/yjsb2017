@@ -1,7 +1,7 @@
 <?php
   $page = array(0,$dp[$tidx]);
 
-  $tid?$listdown=listdown($db,$tableName[$tidx],$ttid[$tidx],$nameHead[$tidx],$nameTable[$tidx],$nameContent[$tidx],$width[$tidx],$page):$listdown;
+  $tid?$listdown=listdown($db,$tid,$name,$tableName[$tidx],$ttid[$tidx],$nameHead[$tidx],$nameTable[$tidx],$nameContent[$tidx],$width[$tidx],$page):$listdown;
   print $listdown;
 
   $query=$db->query("select * from {$tableName[$tidx]} where tid='$ttid[$tidx]'");
@@ -20,4 +20,3 @@
   <!-- paging -->
 </div>
 </div>
-

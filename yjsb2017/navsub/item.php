@@ -16,7 +16,7 @@
   <ul class="nav nav-pills flex-column">
      <?php
      for ( $i=0; $i<$nitem0; $i++ ) {
-       echo "<li class='nav-item navlink'><a class='nav-link active' href='#'><strong>{$nameHead[$i]}</strong></a></li>";
+       echo "<li class='nav-item navlink'><a class='nav-link active'><strong>{$nameHead[$i]}</strong></a></li>";
      }
      for ( $i=0; $i<$nitem1; $i++ ) {
        echo "<li class='nav-item'><a class='nav-link active' href='{$nameLink[0][$i]}' target=_blank><strong>{$nameLink[1][$i]}</strong></a></li>";

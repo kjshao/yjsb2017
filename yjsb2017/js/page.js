@@ -73,26 +73,28 @@ $(document).ready(function($) {
     }
   });
 ////////////////////////////////////////////
-  $(".itemlink").click(function(){
-    var id = $(this).attr('id');
-    var table = $('#tableName').text();
-    var title = $(this).text();
-    var pass;
-    pass = {};
-    pass.id = id;
-    pass.table = table;
-    pass.choice = 3;
-    $.ajax({
-      method:'POST',
-      url:'ajax.php',
-      async:true,
-      dataType:'json',
-      data: pass
-    }).done(function( msg ){
-      $("#titleDiv").html( title );
-      $("#timeDiv").html( msg[0] );
-      $("#mainDiv").html( msg[1] );
-    });
-  });
-////////////////////////////////////////////
+//  $(".itemlink").click(function(){
+//    var id = $(this).attr('id');
+//    var tid = $("#tid").text();
+//    var myurl = $("#item").text().trim();
+//    var title = $(this).text();
+//    var pass;
+//    pass = {};
+//    pass.id = id;
+//    pass.tid = tid;
+//    pass.item = myurl;
+//    pass.choice = 3;
+//    $.ajax({
+//      method:'POST',
+//      url:'ajax.php',
+//      async:true,
+//      dataType:'json',
+//      data: pass
+//    }).done(function( msg ){
+//      $("#titleDiv").html( title );
+//      $("#timeDiv").html( msg[0] );
+//      $("#mainDiv").html( msg[1] );
+//    });
+//  });
+//////////////////////////////////////////////
 });
