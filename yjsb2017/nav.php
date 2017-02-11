@@ -1,6 +1,6 @@
 <div class="navbarx">
 <ul id="menubar">
-  <li><a href="http://www.gsc.dicp.ac.cn/index2017.php">首页</a></li>
+  <li><a href="http://www.gsc.dicp.ac.cn">首页</a></li>
   <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=zhineng">职能</a></li>
   <li><a href="<?php echo __SERVER__?>/navsub/sub.php?item=zhaosheng&tid=1">招生</a>
   	<ul>

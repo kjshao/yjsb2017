@@ -77,7 +77,7 @@ if ( $item == 'zhaosheng' ) {
     $nameTable = array(array("标题","类别","发布日期"));
     $nameContent = array(array("title","name","posttime","id"));
     $width = array(array(0,80,100));
-    $nameLink = array(array("www.gsc.dicp.ac.cn/jxj"),array("奖学金申请"));
+    $nameLink = array(array("http://www.gsc.dicp.ac.cn/jxj"),array("奖学金申请"));
 } elseif ( $item == 'dasha' ) {
     $name = array("dasha","大厦管理");
     $tidx = $tid - 1;
