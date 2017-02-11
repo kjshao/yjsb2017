@@ -74,6 +74,7 @@ $(document).ready(function($) {
   $(".itemlink").click(function(){
     var id = $(this).attr('id');
     var table = $('#tableName').text();
+    var title = $(this).text();
     var pass;
     pass = {};
     pass.id = id;
@@ -85,7 +86,9 @@ $(document).ready(function($) {
       dataType:'json',
       data: pass
     }).done(function( msg ){
-      $("#mainTable").html( msg[1] );
+      $("#title").html( title );
+      $("#time").html( msg[0] );
+      $("#mainDiv").html( msg[1] );
     });
   });
 ////////////////////////////////////////////

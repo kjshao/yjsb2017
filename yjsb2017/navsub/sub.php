@@ -26,16 +26,14 @@ include_once(__ROOT__.'/jumbotron.php');
 include_once(__ROOT__.'/nav.php');
 $item = $_GET['item'];
 $tid = $_GET['tid'];
-$file = __ROOT__.'/navsub/'.$item.'.php';
-if ( file_exists($file) )
-{
-  include_once($file);
+if ( $item == 'zhineng' ) {
+  $file = __ROOT__.'/navsub/'.$item.'.php';
 } else {
-  echo "<h2 style='padding:20px;'>您所访问的页面不存在！</h2>";
-};
+  $file = __ROOT__.'/navsub/item.php';
+}
+include_once($file);
 include_once(__ROOT__.'/footer.php');
 ?>
-
 <script>
   $(document).ready(function(){$('#menubar > li').make_dropdown();});
 </script>

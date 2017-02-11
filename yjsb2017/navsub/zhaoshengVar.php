@@ -10,5 +10,6 @@
     $nameTable = array(array("招生信息","招生类别","发布日期"),array("招生信息","招生类别","发布日期"));
     $nameContent = array(array("title","name","posttime","id"),array("title","name","posttime","id"));
     $width = array(array(0,80,100),array(0,80,100));
+    $nameLink = array(array("http://www.gsc.dicp.ac.cn/bodylist8.php?tid=1"),array("DICP 高校奖学金"));
   }
 ?>

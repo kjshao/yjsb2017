@@ -16,7 +16,7 @@ function listdown($db,$tableName,$ttid,$nameHead,$nameTable,$nameContent,$width,
   while($array=$db->fetch_array($query)){
     $id=$array[$nameContent[$ncolumn]];
     $andsky.="<tr height=30>
-      <td><div align=left style='padding: 0px 15px 0px 15px;'>&nbsp;<a href='#' class='itemlink' id='$id'>".$array[$nameContent[0]]."</a></div></td>";
+      <td class='itemlink' id='$id'><div align=left style='padding: 0px 15px 0px 15px;'>&nbsp;<a href='#'>".$array[$nameContent[0]]."</a></div></td>";
     for ( $j=1; $j<$ncolumn; $j++ ) {
       if ( $j + 1 < $ncolumn ) {
         $tmp = $array[$nameContent[$j]];
