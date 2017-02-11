@@ -9,7 +9,9 @@
     $nitem1 = 0;
   }
 ?>
-<div class="row" style="background:rgb(125,187,244); margin:20px 0px 20px 0px; padding:0px 0px 0px 0px;">
+<div id="titleDiv"></div>
+<div id="timeDiv"></div>
+<div id="mainDiv" class="row" style="background:rgb(125,187,244); margin:20px 0px 20px 0px; padding:0px 0px 0px 0px;">
 <nav class="col-xs-3 sidebar" style="background:rgb(125,187,244); margin:0; padding:0; min-height:300px">
   <ul class="nav nav-pills flex-column">
      <?php

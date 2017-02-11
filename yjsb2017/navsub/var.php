@@ -41,7 +41,7 @@ if ( $item == 'zhaosheng' ) {
     $nameTable = array(array("标题","类别","发布日期"),array("标题","类别","发布日期"),array("标题","发布日期"));
     $nameContent = array(array("title","name","posttime","id"),array("title","name","posttime","id"),array("title","posttime","id"));
     $width = array(array(0,80,100),array(0,100,100),array(0,100));
-    $nameLink = array(array("http://www.gsc.dicp.ac.cn/web04.php#04"),array("表格下载"));
+    $nameLink = array(array("#","http://www.gsc.dicp.ac.cn/web04.php#04"),array("同等学力","表格下载"));
 } elseif ( $item == 'jiuye' ) {
     $tidx = $tid - 1;
     $nameHead = array("出国留学","招聘信息","就业政策","培训指导");
@@ -53,7 +53,7 @@ if ( $item == 'zhaosheng' ) {
     $width = array(array(0,100),array(0,100),array(0,100),array(0,100));
 } elseif ( $item == 'liuxue' ) {
     $tidx = $tid - 1;
-    $nameHead = array("留学生招生/Enrollment","港澳台招生");
+    $nameHead = array("留学生招生<br>Enrollment","港澳台招生");
     $tableName = array("andsky_down5","andsky_down5");
     $ttid = array(1,2);
     $dp = array(20,20);
@@ -70,6 +70,7 @@ if ( $item == 'zhaosheng' ) {
     $nameTable = array(array("标题","类别","发布日期"));
     $nameContent = array(array("title","name","posttime","id"));
     $width = array(array(0,80,100));
+    $nameLink = array(array("www.gsc.dicp.ac.cn/jxj"),array("奖学金申请"));
 } elseif ( $item == 'dasha' ) {
     $tidx = $tid - 1;
     $nameHead = array("大厦管理");

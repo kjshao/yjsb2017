@@ -32,10 +32,11 @@ $(document).ready(function($) {
       pass.num = num;
       pass.tid = tid;
       pass.item = myurl;
+      pass.choice = 2;
       $("#page-info").html("第 " + num + " 页 / 共 " + np + " 页，共" + nt + "条记录");
       $.ajax({
         method:'POST',
-        url:'db.php',
+        url:'ajax.php',
         async:true,
         data: pass
       }).done(function( msg ){
@@ -54,9 +55,10 @@ $(document).ready(function($) {
       pass = {};
       pass.tid = i;
       pass.item = myurl;
+      pass.choice = 1;
       $.ajax({
         method:'POST',
-        url:'link.php',
+        url:'ajax.php',
         async:true,
         dataType:'json',
         data: pass
@@ -79,15 +81,16 @@ $(document).ready(function($) {
     pass = {};
     pass.id = id;
     pass.table = table;
+    pass.choice = 3;
     $.ajax({
       method:'POST',
-      url:'test.php',
+      url:'ajax.php',
       async:true,
       dataType:'json',
       data: pass
     }).done(function( msg ){
-      $("#title").html( title );
-      $("#time").html( msg[0] );
+      $("#titleDiv").html( title );
+      $("#timeDiv").html( msg[0] );
       $("#mainDiv").html( msg[1] );
     });
   });
