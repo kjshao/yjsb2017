@@ -1,7 +1,7 @@
 <?php
 function listdown($db,$tableName,$ttid,$nameHead,$nameTable,$nameContent,$width,$page){
   $ncolumn = count( $nameTable );
-  $andsky="<div id='mainTable'>
+  $andsky="<div id='mainTable'><span style='display:none' id='tableName'>".$tableName."</span>
   <table align=center width=100%  border=1 cellpadding=2 cellspacing=0 bordercolor=#E2E1E1 bgcolor=#FDFCF9>
   <tr height=60><td colspan=".$ncolumn."border=1 style='background:lightblue; font-size:20px; padding:0px 0px 0px 15px;'>".$nameHead."</td></tr>
   <tr height=40>";
@@ -16,7 +16,7 @@ function listdown($db,$tableName,$ttid,$nameHead,$nameTable,$nameContent,$width,
   while($array=$db->fetch_array($query)){
     $id=$array[$nameContent[$ncolumn]];
     $andsky.="<tr height=30>
-      <td><div align=left style='padding: 0px 15px 0px 15px;'>&nbsp;<a href=bodyshow1.php?id=$id>".$array[$nameContent[0]]."</a></div></td>";
+      <td><div align=left style='padding: 0px 15px 0px 15px;'>&nbsp;<a href='#' class='itemlink' id='$id'>".$array[$nameContent[0]]."</a></div></td>";
     for ( $j=1; $j<$ncolumn; $j++ ) {
       if ( $j + 1 < $ncolumn ) {
         $tmp = $array[$nameContent[$j]];

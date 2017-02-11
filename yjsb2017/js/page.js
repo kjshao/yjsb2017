@@ -70,4 +70,23 @@ $(document).ready(function($) {
       });
     }
   });
+////////////////////////////////////////////
+  $(".itemlink").click(function(){
+    var id = $(this).attr('id');
+    var table = $('#tableName').text();
+    var pass;
+    pass = {};
+    pass.id = id;
+    pass.table = table;
+    $.ajax({
+      method:'POST',
+      url:'test.php',
+      async:true,
+      dataType:'json',
+      data: pass
+    }).done(function( msg ){
+      $("#mainTable").html( msg[1] );
+    });
+  });
+////////////////////////////////////////////
 });
